@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.missionbit.game.com.missionbit.game.simplecollision.SimpleCollisionDrawable;
+import com.missionbit.game.com.missionbit.game.text.TextUIDrawable;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class LibGDXExamples extends ApplicationAdapter {
@@ -20,6 +21,9 @@ public class LibGDXExamples extends ApplicationAdapter {
         camera.setToOrtho(false, 800, 480);
 
         drawable = new SimpleCollisionDrawable(camera);
+        //drawable = new SimpleCollisionDrawable(camera, true);
+
+        //drawable = new TextUIDrawable(camera);
 
     }
 
