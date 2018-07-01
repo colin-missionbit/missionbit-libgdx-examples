@@ -20,10 +20,11 @@ public class LibGDXExamples extends ApplicationAdapter {
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 800, 480);
 
-        drawable = new SimpleCollisionDrawable(camera);
-        //drawable = new SimpleCollisionDrawable(camera, true);
+        // Collision demo
+        //drawable = new SimpleCollisionDrawable(camera);
 
-        //drawable = new TextUIDrawable(camera);
+        // Text drawing demo
+        drawable = new TextUIDrawable(camera);
 
     }
 
