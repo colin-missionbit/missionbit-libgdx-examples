@@ -2,6 +2,8 @@ package com.missionbit.game.particleeffects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
 import com.badlogic.gdx.graphics.g2d.ParticleEffectPool;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -9,8 +11,11 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
 import com.missionbit.game.ExampleDrawable;
 
+import java.util.Locale;
+
 public class ParticleEffectDrawable extends ExampleDrawable {
     private SpriteBatch batch;
+    private BitmapFont font;
 
     private ParticleEffectPool effectPool;                  // Pool of particle effects
     private Array<ParticleEffectPool.PooledEffect> effects; // Array of active particle effects
@@ -18,6 +23,8 @@ public class ParticleEffectDrawable extends ExampleDrawable {
 
     public ParticleEffectDrawable(Camera gameCamera) {
         super(gameCamera);
+        font = new BitmapFont();
+        font.setColor(Color.WHITE);
         batch = new SpriteBatch();
 
         effects = new Array<ParticleEffectPool.PooledEffect>();
@@ -28,7 +35,7 @@ public class ParticleEffectDrawable extends ExampleDrawable {
         explosion.scaleEffect(0.5f); // It's kinda big at 480x800, so I had to scale it down
 
         // Initializes the pool with one particle
-        effectPool = new ParticleEffectPool(explosion, 1, 100);
+        effectPool = new ParticleEffectPool(explosion, 1, 200);
     }
 
     @Override
@@ -59,6 +66,7 @@ public class ParticleEffectDrawable extends ExampleDrawable {
     @Override
     public void draw() {
         batch.begin();
+        font.draw(batch, String.format(Locale.US, "Effects: %d | Free: %d/%d | Peak: %d", effects.size, effectPool.getFree(), effectPool.max, effectPool.peak), 0, font.getLineHeight());
         for(ParticleEffectPool.PooledEffect p : effects) { p.draw(batch); }
         batch.end();
     }
