@@ -1,13 +1,14 @@
-package com.missionbit.game;
+package com.missionbit.game.animation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.Sprite;
+
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Array;
 import com.missionbit.game.ExampleDrawable;
+
 
 public class AnimationDrawable extends ExampleDrawable {
 

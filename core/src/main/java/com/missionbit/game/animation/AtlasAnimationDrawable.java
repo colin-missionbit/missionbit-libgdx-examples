@@ -1,14 +1,13 @@
-package com.missionbit.game;
+package com.missionbit.game.animation;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
-import com.badlogic.gdx.graphics.Texture;
+
 import com.badlogic.gdx.graphics.g2d.Animation;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.utils.Array;
 import com.missionbit.game.ExampleDrawable;
 
 
@@ -37,7 +36,7 @@ public class AtlasAnimationDrawable extends ExampleDrawable {
     public void draw(){
         animationTime += Gdx.graphics.getDeltaTime();
         TextureRegion currentFrame = animation.getKeyFrame(animationTime, true);
-        
+
         drawBatch.begin();
         drawBatch.draw(currentFrame, 100, 100);
         drawBatch.end();
