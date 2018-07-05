@@ -39,8 +39,12 @@ public class FlyingCreature {
     }
 
     public void update(){
+//        System.out.println(Gdx.graphics.getDeltaTime());
         float xPos = image.getX() + velocity.x * Gdx.graphics.getDeltaTime();
         float yPos = image.getY() + velocity.y * Gdx.graphics.getDeltaTime();
+
+//        float xPos = image.getX() + velocity.x * 0.015f;// * Gdx.graphics.getDeltaTime();
+//        float yPos = image.getY() + velocity.y * 0.015f;// * Gdx.graphics.getDeltaTime();
 
         image.setX(xPos);
         image.setY(yPos);

@@ -1,4 +1,4 @@
-package com.missionbit.game.com.missionbit.game.text;
+package com.missionbit.game.text;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
@@ -48,7 +48,7 @@ public class TextUIDrawable extends ExampleDrawable implements InputProcessor {
 
         batch = new SpriteBatch();
 
-        text = TextArticle.loadJSON("text/textExample.json");
+        text = TextArticle.loadJSON("text/TextExample.json");
         maxPage = text.bodyText.length() / pageSize;
 
         rightArrow = new Sprite( new Texture(Gdx.files.internal("images/right_arrow.png")));

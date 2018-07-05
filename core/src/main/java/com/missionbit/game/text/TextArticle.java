@@ -1,4 +1,4 @@
-package com.missionbit.game.com.missionbit.game.text;
+package com.missionbit.game.text;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;

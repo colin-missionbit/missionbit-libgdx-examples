@@ -4,8 +4,6 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.missionbit.game.com.missionbit.game.simplecollision.SimpleCollisionDrawable;
-import com.missionbit.game.com.missionbit.game.text.TextUIDrawable;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class LibGDXExamples extends ApplicationAdapter {
@@ -18,14 +16,16 @@ public class LibGDXExamples extends ApplicationAdapter {
 
         // Set up camera for 2d view of 800x480 pixels
         camera = new OrthographicCamera();
-        camera.setToOrtho(false, 800, 480);
+        camera.setToOrtho(false, 960, 540);
 
         // Collision demo -- uncomment this to run
         //drawable = new SimpleCollisionDrawable(camera);
 
         // Text drawing demo
-        drawable = new TextUIDrawable(camera);
+        //drawable = new TextUIDrawable(camera);
 
+        //drawable = new AnimationDrawable(camera);
+        drawable = new AtlasAnimationDrawable(camera);
     }
 
     @Override
@@ -41,6 +41,13 @@ public class LibGDXExamples extends ApplicationAdapter {
         //Update and draw our shapes
         drawable.update();
         drawable.draw();
+
+//        try {
+//            Thread.sleep(200);
+//        }
+//        catch(InterruptedException e){
+//
+//        }
 
 
     }

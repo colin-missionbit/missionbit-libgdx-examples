@@ -1,4 +1,4 @@
-package com.missionbit.game.com.missionbit.game.simplecollision;
+package com.missionbit.game.simplecollision;
 
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
