@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.missionbit.game.animation.AtlasAnimationDrawable;
+import com.missionbit.game.particleeffects.ParticleEffectDrawable;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public class LibGDXExamples extends ApplicationAdapter {
@@ -26,7 +27,10 @@ public class LibGDXExamples extends ApplicationAdapter {
         //drawable = new TextUIDrawable(camera);
 
         //drawable = new AnimationDrawable(camera);
-        drawable = new AtlasAnimationDrawable(camera);
+        //drawable = new AtlasAnimationDrawable(camera);
+
+        // Particle effect demo
+        drawable = new ParticleEffectDrawable(camera);
     }
 
     @Override
